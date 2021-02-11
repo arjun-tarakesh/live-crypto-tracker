@@ -47,7 +47,7 @@ const Coin = ({name, image, symbol, price, volume, priceChange,marketCap,marketC
                 <Col xl="2" lg="2" md="12" sm="12" className="coin-col"><p className="coin-mktcaprank">Rank :  #{marketCapRank.toLocaleString()}</p></Col>
                 <Col xl="12" lg="12" md="12" sm="12" className="stats-col">
                 <div>
-                        <Button color="primary" onClick={toggle} style={{ marginBottom: '1rem' }} className="stats">Toggle</Button>
+                        <Button color="primary" onClick={toggle} style={{ marginBottom: '1rem' }} className="stats">More stats</Button>
                         <Collapse isOpen={isOpen}>
                             <Card className="stats-details">
                             <CardBody className="stats-body">
