@@ -1,0 +1,83 @@
+.coin-img{
+    height: 40px;
+}
+p{
+    font-weight: 500;
+    text-align: center;
+}
+.coin-row{
+    padding-top: 10px;
+    
+    border-bottom: 2px solid rgba(63, 63, 63, 0.185);
+    border-radius: 10px;
+     display: flex;
+     justify-content: center;
+}
+.coin-col{
+
+     display: flex;
+     justify-content: center;
+}
+.red {
+    color: #f00606;
+  }
+  
+  .green {
+    color: #11d811;
+  }
+
+
+h1{
+    font-size: 24px;
+}
+.coin-col1>p{
+    text-align: left;
+    
+}
+.stats{
+    border-radius: 14px;
+    background-color: #252527;
+    border: none;
+    margin: auto ;
+    
+}.stats:hover{
+   
+    background-color: #1c1c1d;
+    
+    
+}.stats:active{
+   border: none;
+    background-color: #1c1c1d;
+    
+    
+}.stats:focus{
+   border: none;
+    background-color: #1c1c1d;
+    
+    
+}
+.stats-col{
+    display: flex;
+    text-align: center !important;
+    justify-content: center !important;
+}  
+.stats-details{
+    border: none;
+    margin-bottom: 10px;
+}.stats-body{
+    background-color: #252527;
+}.stats-body>p{
+    background-color: #252527;
+}
+
+
+@media only screen and (max-width: 1000px) {
+    .coin-col1{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+
+    }
+           
+    
+  }
