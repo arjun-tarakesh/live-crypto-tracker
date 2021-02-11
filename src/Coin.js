@@ -4,7 +4,7 @@ import {Container, Row, Col} from "reactstrap"
 import { Collapse, Button, CardBody, Card } from 'reactstrap';
 const Coin = ({name, image, symbol, price, volume, priceChange,marketCap,marketCapRank, circulateSupply, totalSupply, maxSupply, athvalue, athPercentage, athDate, lastUpdate}) => {
     const [isOpen, setIsOpen] = useState(false);
-
+    
     const toggle = () => setIsOpen(!isOpen);
     
     return (
