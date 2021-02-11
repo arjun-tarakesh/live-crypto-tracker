@@ -8,7 +8,7 @@ p{
 .coin-row{
     padding-top: 10px;
     
-    border-bottom: 2px solid rgba(63, 63, 63, 0.185);
+    border-bottom: 2px solid rgba(63, 63, 63, 0.781);
     border-radius: 10px;
      display: flex;
      justify-content: center;

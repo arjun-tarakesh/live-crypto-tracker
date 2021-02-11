@@ -4,7 +4,8 @@ import './App.css';
 import "bootstrap/dist/css/bootstrap.min.css"
 import Coin from "./Coin";
 import logo from "./bitinr.png"
-
+import {Button} from "reactstrap"
+import Navbar from "./Navbar"
 
 
 function App() {
@@ -12,16 +13,24 @@ function App() {
   const [coins,setCoins] = useState([]);
   const [search,setSearch] = useState('');
 
- 
+ const getPosts = async () => {
+   try{
+   const results = await axios.get('https://api.coingecko.com/api/v3/coins/markets?vs_currency=inr&order=market_cap_desc&per_page=100&page=1&sparkline=false')
+   setCoins(results.data);
+  }
+  catch(error) { alert('Error fetching data');}
+  
+
+  }
 
   useEffect(() => {
-    axios.get('https://api.coingecko.com/api/v3/coins/markets?vs_currency=inr&order=market_cap_desc&per_page=100&page=1&sparkline=false')
-    .then(res => {
-      setCoins(res.data)
-      console.log(res.data);
-    })
-    // promises based async await
-    .catch(error => alert('Error hitting API'));
+    getPosts()
+    const interval=setInterval(()=>{
+      getPosts()
+     },10000)
+       
+       
+     return()=>clearInterval(interval)
   },[])
 
   const handleChange = e =>{
@@ -34,8 +43,10 @@ function App() {
     )
 
   return (
-    
-    <div className="coin-app">
+   <div>
+     <Navbar />
+    <div className="coin-app" id="home">
+
       <img src={logo} className="logo" alt="logo"/>
       <h1 className="head">INR CRYPTO TRACKER</h1>
       
@@ -72,6 +83,7 @@ function App() {
           <button className="git"><a href="https://github.com/arjun-tarakesh" target="_blank" >Github</a></button>
           
          </div>
+    </div>
     </div>
   );
 }

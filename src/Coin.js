@@ -18,10 +18,10 @@ const Coin = ({name, image, symbol, price, volume, priceChange,marketCap,marketC
 
 
                 <Col xl="2" lg="2" md="12" sm="12"  className="coin-col">
-                <p className="coin-price">Value ₹{price.toLocaleString()}</p></Col>
+                <p className="coin-price">Value ₹{price.toLocaleString('en-IN')}</p></Col>
 
 
-                <Col xl="2" lg="2" md="12" sm="12" className="coin-col"><p className="coin-volume">Volume ₹{volume.toLocaleString()}</p></Col>
+                <Col xl="2" lg="2" md="12" sm="12" className="coin-col"><p className="coin-volume">Volume ₹{volume.toLocaleString('en-IN')}</p></Col>
                     {/* toLocaleString for the commas in the price */}
                 
                 <Col xl="2" lg="2" md="12" sm="12" className="coin-col">    
@@ -40,7 +40,7 @@ const Coin = ({name, image, symbol, price, volume, priceChange,marketCap,marketC
 
 
                 <Col xl="2" lg="2" md="12" sm="12" className="coin-col" >
-                    <p className="coin-mktcap">MarketCap  ₹{marketCap.toLocaleString()}</p>
+                    <p className="coin-mktcap">MarketCap  ₹{marketCap.toLocaleString('en-IN')}</p>
                 </Col>
 
 
@@ -52,10 +52,10 @@ const Coin = ({name, image, symbol, price, volume, priceChange,marketCap,marketC
                             <Card className="stats-details">
                             <CardBody className="stats-body">
                             
-                            <p>Circulating Supply : ₹{circulateSupply}</p>
-                            <p>Total Supply : ₹{totalSupply}</p>
-                            <p>Maximum Supply : ₹{maxSupply}</p>
-                            <p>ATH : ₹{athvalue}</p>
+                            <p>Circulating Supply : {circulateSupply}</p>
+                            <p>Total Supply : {totalSupply}</p>
+                            <p>Maximum Supply : {maxSupply}</p>
+                            <p>ATH : {athvalue}</p>
                             <p>ATH % : {athPercentage}%</p>
                             <p>ATH date : {athDate}</p>
                             <p>Last Updated : {lastUpdate}</p>
